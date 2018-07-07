@@ -2,8 +2,8 @@
   "name": "sample-client",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
-  "typings": "dist/index.ts",
+  "main": "dist/index.js",
+  "typings": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
