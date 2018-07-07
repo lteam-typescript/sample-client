@@ -8,7 +8,7 @@ export class Device{
 
     }
 
-    static build(baseURL = "http://127.0.0.1"){
+    public static build(baseURL = "http://127.0.0.1"){
         return new Device(Axios.create({
             baseURL
         }))
@@ -20,9 +20,10 @@ export class Device{
     }
 
     async create() {
-        return await this.requester.post('/device', {
+        const resp = await this.requester.post('/device', {
             status: "on"
         })
+        return resp.data as type.ID
     }
 
     async retrieve(device_id: string) {
